@@ -24,23 +24,55 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">About <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="portfolio.html">Portfolio</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="contact.html">Contact Me</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
+      <!-- This is the Login Button Modal -->
+
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+      <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+          </div>
+
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+
+
     </div>
   </nav>
 
-
+  <!-- This is fluid jumbotron from Bootstrap -->
   <div class="jumbotron jumbotron-fluid jumbotron-dark">
     <div class="container fluid">
       <div class="row">
@@ -64,13 +96,14 @@
           making something. It was the first bug that I got that I would like to create something out of my imagination. I am youtube, nextflix, amazon video watching (when there is nothing else), and podcasting listening type of gal. </p>
         <hr>
 
+        <!-- This is Card from Bootstrap -->
         <aside>
-          <!-- This is Card from Bootstrap -->
           <div class="card text-center text-white bg-secondary mb-3" style="max-width: 900px; max-height: 200%">
             <div class="card-header card text-center text-white card">Social Links
               <div class="card-body">
                 <h5 class="card-title text"></h5>
                 <br>
+
                 <!-- This is Circle Menu that contain my Social Links and 360 degrees of Icon-->
                 <nav class="menu">
                   <input checked="checked" class="menu-toggler" type="checkbox">
@@ -99,20 +132,19 @@
                 <!-- This is the End of the Circle Menu Code that contain my Social Links and 360 degrees of Icon-->
 
         </aside>
+                <!-- This is end of the Card from Bootstrap -->
       </div>
     </div>
   </div>
 
-
+  <!-- This is the Footer from Bulma Library -->
   <footer>
     <section class="hero is-dark is-medium">
       <div class="hero-body">
         <h1 class="title">
-        </h1>
-        <h2 class="subtitle">
           Linkedin|Email|GitHub|Slack|Twitch|Google Drive
           <br>
-        </h2>
+        </h1>
         <a href="https://www.linkedin.com/in/david-irizarry-23887648/" target="_blank"><img src="assets/images/linkedin.png" width="37" height="37" alt="Linkedin"></a>
         <a href="mailto:david.irizarry86@yahoo.com" target="_blank"><img src="assets/images/email.png" width="37" height="37" alt="Email"></a>
         <a href="https://github.com/izzydavid" target="_blank"><img src="assets/images/github.png" width="37" height="37" alt="Github"></a>
@@ -122,6 +154,22 @@
       </div>
     </section>
   </footer>
+  <!-- This is the end Footer from Bulma Library -->
+
+
+  <!-- This is Javascript for the Login Modal -->
+  <script>
+
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 
