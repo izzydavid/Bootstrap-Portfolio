@@ -10,6 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel=stylesheet" href ="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Oswald:400,300,700);"
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
@@ -105,30 +106,19 @@
                 <br>
 
                 <!-- This is Circle Menu that contain my Social Links and 360 degrees of Icon-->
-                <nav class="menu">
-                  <input checked="checked" class="menu-toggler" type="checkbox">
-                  <label for="menu-toggler"></label>
-                  <ul>
-                    <li class="menu-item">
-                      <a href="https://drive.google.com/open?id=1iRXgkNBdvG0S88CcWDadTtm6M2zXmhH6" target="_blank"><img src="assets/images/google_drive.png" width="37" height="37" alt="Google Drive"></a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="https://www.linkedin.com/in/david-irizarry-23887648/" target="_blank"><img src="assets/images/linkedin.png" width="37" height="37" alt="Linkedin"></a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="mailto:david.irizarry86@yahoo.com" target="_blank"><img src="assets/images/email.png" width="37" height="37" alt="Email"></a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="https://github.com/izzydavid" target="_blank"><img src="assets/images/github_dark.png" width="37" height="37" alt="Github"></a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="https://gwarl201904fsf5.slack.com/messages/DJ41ZTXS8" target="_blank"><img src="assets/images/slack.png" width="50" height="37" alt="Slack"></a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="https://www.twitch.tv/izzydavid" target="_blank"><img src="assets/images/twitch.png" width="50" height="37" alt="Twitch"></a>
-                    </li>
-                  </ul>
-                </nav>
+                <div id="mainMenu" class="mainMenuOverlay floating2">
+    <div class="navire floating3"></div>
+  	<div class="itemMenuBox bills"><a href="https://codepen.io/mahmoud-nb/pen/ZOYdKm" target="_blank" class="itemMenu "><i class="fa fa-file-text-o" aria-hidden="true"></i></a></div>
+  	<div class="itemMenuBox tarsheed"><a href="javascript:void(0)" class="itemMenu "><i class="fa fa-diamond" aria-hidden="true"></i></a></div>
+  	<div class="itemMenuBox employees"><a href="javascript:void(0)" class="itemMenu "><i class="fa fa-users" aria-hidden="true"></i></a></div>
+  	<div class="itemMenuBox location"><a href="javascript:void(0)" class="itemMenu "><i class="fa fa-location-arrow" aria-hidden="true"></i></a></div>
+  	<div class="itemMenuBox eservices"><a href="javascript:void(0)" class="itemMenu "><i class="fa fa-key" aria-hidden="true"></i></a></div>
+  	<div class="itemMenuBox contact"><a href="javascript:void(0)" class="itemMenu "><i class="fa fa-phone" aria-hidden="true"></i></a></div>
+
+  	<a href="javascript:void(0)" class="toggleMenu floating" ><i class="fa fa-bars" aria-hidden="true"></i></a>
+  </div>
+
+
                 <!-- This is the End of the Circle Menu Code that contain my Social Links and 360 degrees of Icons-->
 
         </aside>
@@ -169,6 +159,10 @@
         modal.style.display = "none";
       }
     }
+
+    $(".toggleMenu").on('click', function(){
+  $("#mainMenu").toggleClass('open');
+});
   </script>
 
 </body>
