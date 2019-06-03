@@ -6,6 +6,9 @@ body {
   overflow: hidden;
   background: #E6E6FA;
   background: linear-gradient(to right, #, #E6E6FA)
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+
 }
 
 /**This is Native CSS Footer*/
@@ -22,19 +25,14 @@ section {
 }
 
 /*This is Bulma Library Footer*/
-.hero-body{
+#hero-body{
       text-align: center;
       height: 5px;
+      position: sticky; 
 }
 /*This is end of the Bulma Library Footer*/
 
-/*The Start of the Floating_Menu found in bottom of page*/
-
-body {
-  overflow: hidden;
-  background: #E6E6FA;
-  background: linear-gradient(to right, #AFEEEE, #E6E6FA)
-}
+<---The Start of the Floating_Menu found in bottom of page ---> 
 .menu-toggler {
   position: absolute;
   display: block;
@@ -50,15 +48,15 @@ body {
   cursor:pointer;
 }
 .menu-toggler:hover + label,
-.menu-toggler:hover + label:before,
-.menu-toggler:hover + label:after,{
+.menu-toggler:hover + label:after,
+.menu-toggler:hover + label:before,{
   background: white;
 }
 .menu-toggler:checked + label {
   background: transparent;
 }
-.menu-toggler:checked + label:before,
-.menu-toggler:checked + label:after,{
+.menu-toggler:checked + label:after,
+.menu-toggler:checked + label:before,{
   top:0;
   width:40px;
   transform-origin: 50% 50%;
@@ -109,8 +107,8 @@ body {
   right: 0;
   margin: auto;
 }
-.menu-toggler + label:before,
-.menu-toggler + label:after {
+.menu-toggler + label:after,
+.menu-toggler + label:before {
   width: 40px;
   height: 5px;
   display: block;
@@ -120,7 +118,7 @@ body {
   transition: transform 0.5s top 0.5s;
   content: "";
   position: absolute;
-  display: block;
+  display: flexbox;
   left: 0;
 }
 .menu-toggler + label:before {
@@ -180,9 +178,8 @@ body {
   background: rgba(255, 255, 255, 0.3);
   font-size: 44.44px
 }
-<!--The end of the Floating_Menu found in bottom of page -->
+<!--The end of the Circle_Menu found in bottom of page -->
 
-body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -303,8 +300,6 @@ span.psw {
   }
 
 
-  body {font-family: Arial, Helvetica, sans-serif;}
-  * {box-sizing: border-box;}
 
   /* Full-width input fields */
   input[type=text], input[type=password] {
