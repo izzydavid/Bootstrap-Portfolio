@@ -8,7 +8,7 @@ body {
   background: linear-gradient(to right, #, #E6E6FA)
 }
 
-<!--This is Native CSS Footer-->
+/**This is Native CSS Footer*/
 footer,
 section {
   padding: 50px 0;
@@ -21,202 +21,165 @@ section {
   line-height: inherit;
 }
 
-<!--This is Bulma Library Footer-->
+/*This is Bulma Library Footer*/
 .hero-body{
       text-align: center;
       height: 5px;
 }
+/*This is end of the Bulma Library Footer*/
 
-<!--The Start of the Floating_Menu found in bottom of page -->
+/*The Start of the Floating_Menu found in bottom of page*/
 
-body{background-color: rgba(218, 245, 255, 0.97);font-family: 'Oswald', sans-serif;}
-
-.navire{background:url(https://res.cloudinary.com/dioieuprs/image/upload/v1471359656/navire_n02z6s.png) no-repeat; background-size:100% auto; width:120px; height:100px; position:absolute; top:-50px; right:-130px;-webkit-transition: right 0.2s ease; transition: right 0.2s ease; }
-
-.mainMenuOverlay.open .navire{right:70%;-webkit-transition: right 28s ease 1s; transition: right 28s ease 1s;}
-/* ### main Menu Overlay */
-.mainMenuOverlay {
-	background-color: rgba(34, 152, 195, 0.84);
-	position: fixed;left: 0;right: 0;bottom: -420px;z-index: 999;
-	height: 420px;
-	box-shadow: 0 0 15px -3px #03374A;
-  border-radius: 100% 100% 0 0 / 14% 14% 0 0;
-	-webkit-transition: bottom 0.5s ease; transition: bottom 0.5s ease;
+body {
+  overflow: hidden;
+  background: #E6E6FA;
+  background: linear-gradient(to right, #AFEEEE, #E6E6FA)
 }
-.mainMenuOverlay.open {	bottom: 0; }
-.mainMenuOverlay .toggleMenu {
-	display: block;
-	/*background: url(https://res.cloudinary.com/dioieuprs/image/upload/v1466688705/floating-menu/sandwich.png) no-repeat center center #65B5D0;background-size: 23px auto;*/
-  background-color:#65B5D0;
-	border: 1px solid #FFF;	border-radius: 80px;
-	width: 62px;height: 62px;
-	position: absolute;top: -12px;left: 50%;
-	margin: -31px 0 0 -31px;
-	cursor: pointer;
-  font-size:24px; color:#FFF; text-align:center; line-height:62px;
-	box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2) inset, 0 0 16px -4px #063343;
-	-webkit-transition: box-shadow 0.5s ease, top 0.5s ease; transition: box-shadow 0.5s ease, top 0.5s ease;
+.menu-toggler {
+  position: absolute;
+  display: block;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  margin:auto;
+  width:40px;
+  height:40px;
+  z-index:2;
+  opacity:0;
+  cursor:pointer;
 }
-.mainMenuOverlay .toggleMenu:hover, .mainMenuOverlay .toggleMenu:active{}
-
-.mainMenuOverlay.open .toggleMenu {	top: 50%;	background-color: #2298C3;}
-
-.mainMenuOverlay .itemMenuBox {
-	background: url(https://res.cloudinary.com/dioieuprs/image/upload/v1466688705/floating-menu/go2.png) no-repeat center center;background-size: 28px auto;
-	position: absolute;	top: 50%;	left: 50%;
-	margin: -31px 0 0 -31px;
-	height: 62px;	width: 142px;
-	text-align: right;
-	border-radius: 40px;
-	-webkit-transform-origin: 31px 31px;
-	-ms-transform-origin: 31px 31px;
-	transform-origin: 31px 31px;
-	-webkit-transition: all 1s ease 0.4s;
-	transition: all 1s ease 0.4s;
+.menu-toggler:hover + label,
+.menu-toggler:hover + label:before,
+.menu-toggler:hover + label:after,{
+  background: white;
 }
-.mainMenuOverlay.open .itemMenuBox {width: 182px;	-webkit-transition: all 1s ease 0s;	transition: all 1s ease 0s;
+.menu-toggler:checked + label {
+  background: transparent;
 }
-.mainMenuOverlay .itemMenuBox.bills {-webkit-transform: rotate(270deg);	-ms-transform: rotate(270deg);	transform: rotate(270deg);
+.menu-toggler:checked + label:before,
+.menu-toggler:checked + label:after,{
+  top:0;
+  width:40px;
+  transform-origin: 50% 50%;
 }
-.mainMenuOverlay .itemMenuBox.tarsheed {-webkit-transform: rotate(330deg);	-ms-transform: rotate(330deg);	transform: rotate(330deg);
+.menu-toggler:checked + label:before {
+  transform: rotate(45deg) translateY(-15px) translateX(-15px);
 }
-.mainMenuOverlay .itemMenuBox.employees {-webkit-transform: rotate(30deg);	-ms-transform: rotate(30deg);	transform: rotate(30deg);
+.menu-toggler:checked + label:after {
+  transform: rotate(-45deg);
 }
-.mainMenuOverlay .itemMenuBox.location {-webkit-transform: rotate(90deg);	-ms-transform: rotate(90deg);	transform: rotate(90deg);
+.menu-toggler:checked ~ ul .menu-item { 
+  opacity: 1;
 }
-.mainMenuOverlay .itemMenuBox.eservices {-webkit-transform: rotate(150deg);	-ms-transform: rotate(150deg);	transform: rotate(150deg);
+.menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+  transform: rotate(0deg) translate(-110px);
 }
-.mainMenuOverlay .itemMenuBox.contact {-webkit-transform: rotate(210deg);	-ms-transform: rotate(210deg);	transform: rotate(210deg);
+.menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+  transform: rotate(60deg) translateX(-110px);
 }
-.mainMenuOverlay .itemMenuBox .itemMenu {
-	display: inline-block;
-	border: 2px solid rgba(255,255,255,0.6);	border-radius: 40px;
-	background-color: #1f97c2;	background-repeat: no-repeat;	background-position: center center;
-	width: 62px;height: 62px;
-	border-radius: 40px;
-  transition: all 0.8s ease;
-  color:#FFF; font-size:28px; line-height:64px; text-align:center;
+.menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+  transform: rotate(120deg) translateX(-110px);
 }
-.mainMenuOverlay .itemMenuBox.bills .itemMenu {
-	/*background-image: url(https://res.cloudinary.com/dioieuprs/image/upload/v1466688705/floating-menu/file.png);
-	background-size: 20px auto;*/
-	-webkit-transform: rotate(90deg);	-ms-transform: rotate(90deg);	transform: rotate(90deg);
+.menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+  transform: rotate(180deg) translateX(-110px);
 }
-.mainMenuOverlay .itemMenuBox.tarsheed .itemMenu {
-	/* background-image: url(https://res.cloudinary.com/dioieuprs/image/upload/v1466688705/floating-menu/tarsheed.png);
-	background-size: 38px auto;*/
-	-webkit-transform: rotate(30deg);	-ms-transform: rotate(30deg);	transform: rotate(30deg);
+.menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+  transform: rotate(240deg) translateX(-110px);
 }
-.mainMenuOverlay .itemMenuBox.employees .itemMenu {
-	/*background-image: url(https://res.cloudinary.com/dioieuprs/image/upload/v1466688705/floating-menu/employees.png);
-	background-size: 38px auto;*/
-	-webkit-transform: rotate(330deg);-ms-transform: rotate(330deg);transform: rotate(330deg);
+.menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+  transform: rotate(300deg) translateX(-110px);
 }
-.mainMenuOverlay .itemMenuBox.location .itemMenu {
-	/*background-image: url(https://res.cloudinary.com/dioieuprs/image/upload/v1466688705/floating-menu/marker.png);
-	background-size: 24px auto;*/
-	-webkit-transform: rotate(270deg);	-ms-transform: rotate(270deg);	transform: rotate(270deg);
+.menu-toggler:checked ~ ul .menu-item a {
+  pointer-events:auto;
 }
-.mainMenuOverlay .itemMenuBox.eservices .itemMenu {
-	/*background-image: url(https://res.cloudinary.com/dioieuprs/image/upload/v1466688705/floating-menu/mouse.png);
-	background-size: 32px auto;*/
-	-webkit-transform: rotate(210deg);	-ms-transform: rotate(210deg);	transform: rotate(210deg);
+.menu-toggler + label {
+  width: 40px;
+  height: 5px;
+  display: block;
+  z-index: 1;
+  border-radius: 2.5px;
+  background: rgba(230, 239, 250, 0.9);
+  transition: transform 0.5s top 0.5s;
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
-.mainMenuOverlay .itemMenuBox.contact .itemMenu {
-	/*background-image: url(https://res.cloudinary.com/dioieuprs/image/upload/v1466688705/floating-menu/phone.png);
-	background-size: 19px auto;*/
-	-webkit-transform: rotate(150deg);	-ms-transform: rotate(150deg);	transform: rotate(150deg);
+.menu-toggler + label:before,
+.menu-toggler + label:after {
+  width: 40px;
+  height: 5px;
+  display: block;
+  z-index: 1;
+  border-radius: 2.5px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: transform 0.5s top 0.5s;
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
 }
-/* Hover */
-.mainMenuOverlay .itemMenuBox.bills .itemMenu:hover {
-    -webkit-transform: rotate(450deg);	-ms-transform: rotate(450deg);	transform: rotate(450deg);
+.menu-toggler + label:before {
+  top: 10px;
 }
-.mainMenuOverlay .itemMenuBox.tarsheed .itemMenu:hover {
-    -webkit-transform: rotate(390deg);	-ms-transform: rotate(390deg);	transform: rotate(390deg);
+.menu-toggler + label:after {
+  top: -10px;
 }
-.mainMenuOverlay .itemMenuBox.employees .itemMenu:hover {
-    -webkit-transform: rotate(690deg);	-ms-transform: rotate(690deg);	transform: rotate(690deg);
+.menu-item:nth-child(1) a {
+  transform: rotate(0deg);
 }
-.mainMenuOverlay .itemMenuBox.location .itemMenu:hover {
-    -webkit-transform: rotate(630deg);	-ms-transform: rotate(630deg);	transform: rotate(630deg);
+.menu-item:nth-child(2) a {
+  transform: rotate(-60deg);
 }
-.mainMenuOverlay .itemMenuBox.eservices .itemMenu:hover {
-    -webkit-transform: rotate(570deg);	-ms-transform: rotate(570deg);	transform: rotate(570deg);
+.menu-item:nth-child(3) a {
+  transform: rotate(-120deg);
 }
-.mainMenuOverlay .itemMenuBox.contact .itemMenu:hover {
-    -webkit-transform: rotate(510deg);	-ms-transform: rotate(510deg);	transform: rotate(510deg);
+.menu-item:nth-child(4) a {
+  transform: rotate(-180deg);
 }
-.floating{
-    -webkit-animation-name: Floatingx;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-name: Floating;
-    -moz-animation-duration: 3s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: ease-in-out;
+.menu-item:nth-child(5) a {
+  transform: rotate(-240deg);
 }
-@-webkit-keyframes Floatingx{
-    from {-webkit-transform:translate(0, 0px);}
-    65% {-webkit-transform:translate(0, 5px);}
-    to {-webkit-transform: translate(0, -0px);    }
+.menu-item:nth-child(6) a {
+  transform: rotate(-300deg);
 }
-@-moz-keyframes Floating{
-    from {-moz-transform:translate(0, 0px);}
-    65% {-moz-transform:translate(0, 5px);}
-    to {-moz-transform: translate(0, -0px);}
+.menu-item {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  transition: 0.5s;
 }
-.floating2{
-    -webkit-animation-name: Floatingx2;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-name: Floating2;
-    -moz-animation-duration: 3s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: ease-in-out;
+.menu-item a {
+  display: block;
+  width: inherit;
+  height: inherit;
+  line-height: 80px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(230, 230, 250, 0.7);
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+  pointer-events: none;
+  transition: 0.2s;
 }
-@-webkit-keyframes Floatingx2{
-    from {-webkit-transform:translate(0, 0px);}
-    45% {-webkit-transform:translate(0, 8px);}
-    to {-webkit-transform: translate(0, -0px);    }
+.menu-item a:hover {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+  color: white;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 44.44px
 }
-@-moz-keyframes Floating2{
-    from {-moz-transform:translate(0, 0px);}
-    45% {-moz-transform:translate(0, 8px);}
-    to {-moz-transform: translate(0, -0px);}
-}
-.floating3{
-    -webkit-animation-name: Floatingx3;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-name: Floating3;
-    -moz-animation-duration: 3s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: ease-in-out;
-}
-@-webkit-keyframes Floatingx3{
-    from {-webkit-transform:translate(0, 0px);}
-    50% {-webkit-transform:translate(2px, 4px);}
-    to {-webkit-transform: translate(0, -0px);    }
-}
-@-moz-keyframes Floating3{
-    from {-moz-transform:translate(0, 0px);}
-    50% {-moz-transform:translate(2px, 4px);}
-    to {-moz-transform: translate(0, -0px);}
-}
-/* signature */
-.signatureBox{text-align:right; padding:4px;}
-.signatureBox.fixed{ position:fixed; bottom:8px; right:8px; }
-.signature, .signature a{color:#484848; }
-.signature:before, .signature:after{ display:inline-block; overflow:hidden; vertical-align: bottom; -webkit-transition: all 0.5s; -webkit-transition: all 0.5s; width:11px}
-.signature:before{content:'Mahmoud';}
-.signature:after{content:'NBET'; margin-left:0px;width:10px}
-
-.signature:hover{color:#484848;}
-.signature:hover:before{width:76px;}
-.signature:hover:after{width:34px; margin-left:3px;}
 <!--The end of the Floating_Menu found in bottom of page -->
 
 body {font-family: Arial, Helvetica, sans-serif;}
