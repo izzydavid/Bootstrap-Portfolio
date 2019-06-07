@@ -1,7 +1,10 @@
 p {
   text-align: center;
 }
+.navbar { 
+  position: 
 
+}
 body {
   overflow: hidden;
   background: #E6E6FA;
@@ -33,6 +36,11 @@ section {
 /*This is end of the Bulma Library Footer*/
 
 <---The Start of the Floating_Menu found in bottom of page ---> 
+body {
+  overflow: hidden;
+  background: #E6E6FA;
+  background: linear-gradient(to right, #AFEEEE, #E6E6FA)
+}
 .menu-toggler {
   position: absolute;
   display: block;
@@ -48,15 +56,15 @@ section {
   cursor:pointer;
 }
 .menu-toggler:hover + label,
-.menu-toggler:hover + label:after,
-.menu-toggler:hover + label:before,{
+.menu-toggler:hover + label:before,
+.menu-toggler:hover + label:after,{
   background: white;
 }
 .menu-toggler:checked + label {
   background: transparent;
 }
-.menu-toggler:checked + label:after,
-.menu-toggler:checked + label:before,{
+.menu-toggler:checked + label:before,
+.menu-toggler:checked + label:after,{
   top:0;
   width:40px;
   transform-origin: 50% 50%;
@@ -107,8 +115,8 @@ section {
   right: 0;
   margin: auto;
 }
-.menu-toggler + label:after,
-.menu-toggler + label:before {
+.menu-toggler + label:before,
+.menu-toggler + label:after {
   width: 40px;
   height: 5px;
   display: block;
@@ -118,7 +126,7 @@ section {
   transition: transform 0.5s top 0.5s;
   content: "";
   position: absolute;
-  display: flexbox;
+  display: block;
   left: 0;
 }
 .menu-toggler + label:before {
@@ -180,6 +188,15 @@ section {
 }
 <!--The end of the Circle_Menu found in bottom of page -->
 
+.modal-header, h4, .close {
+  background-color: #5cb85c;
+  color:white !important;
+  text-align: center;
+  font-size: 30px;
+}
+.modal-footer {
+  background-color: #f9f9f9;
+}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
