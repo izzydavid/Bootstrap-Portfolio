@@ -1,22 +1,45 @@
-p {
-  text-align: center;
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: center;
+  background-color: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
+  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
 }
-.navbar { 
-  position: 
+
+.container-fluid, .jumbotron{ 
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: center;
 
 }
-body {
-  overflow: hidden;
-  background: #E6E6FA;
-  background: linear-gradient(to right, #, #E6E6FA)
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-
+.card-img-top { 
+  max-width: 280px !important; 
+  min-height:200px !important; 
+  border-radius: 20px !important; 
+  padding-top: 20px; 
+  justify-content: center !important;
+  align-content: center !important;
 }
-
 .card {
   float: left;
   align-content: center;
+  margin: 10px; 
+  height: 450px; 
+  min-width: 100%;
+  z-index: -1px !important;
+  border-radius: 20px !important;
 }
 /**This is Native CSS Footer*/
 footer,
@@ -31,545 +54,16 @@ section {
   line-height: inherit;
 }
 
+p { 
+  text-align: center;
+  color: black;
+  font-size: 25px; 
+}
+
 /*This is Bulma Library Footer*/
 #hero-body{
       text-align: center;
       height: 5px;
       position: sticky; 
 }
-/*This is end of the Bulma Library Footer*/
 
-<---The Start of the Floating_Menu found in bottom of page ---> 
-body {
-  overflow: hidden;
-  background: #E6E6FA;
-  background: linear-gradient(to right, #AFEEEE, #E6E6FA)
-}
-.menu-toggler {
-  position: absolute;
-  display: block;
-  top:0;
-  bottom:0;
-  right:0;
-  left:0;
-  margin:auto;
-  width:40px;
-  height:40px;
-  z-index:2;
-  opacity:0;
-  cursor:pointer;
-}
-.menu-toggler:hover + label,
-.menu-toggler:hover + label:before,
-.menu-toggler:hover + label:after,{
-  background: white;
-}
-.menu-toggler:checked + label {
-  background: transparent;
-}
-.menu-toggler:checked + label:before,
-.menu-toggler:checked + label:after,{
-  top:0;
-  width:40px;
-  transform-origin: 50% 50%;
-}
-.menu-toggler:checked + label:before {
-  transform: rotate(45deg) translateY(-15px) translateX(-15px);
-}
-.menu-toggler:checked + label:after {
-  transform: rotate(-45deg);
-}
-.menu-toggler:checked ~ ul .menu-item { 
-  opacity: 1;
-}
-.menu-toggler:checked ~ ul .menu-item:nth-child(1) {
-  transform: rotate(0deg) translate(-110px);
-}
-.menu-toggler:checked ~ ul .menu-item:nth-child(2) {
-  transform: rotate(60deg) translateX(-110px);
-}
-.menu-toggler:checked ~ ul .menu-item:nth-child(3) {
-  transform: rotate(120deg) translateX(-110px);
-}
-.menu-toggler:checked ~ ul .menu-item:nth-child(4) {
-  transform: rotate(180deg) translateX(-110px);
-}
-.menu-toggler:checked ~ ul .menu-item:nth-child(5) {
-  transform: rotate(240deg) translateX(-110px);
-}
-.menu-toggler:checked ~ ul .menu-item:nth-child(6) {
-  transform: rotate(300deg) translateX(-110px);
-}
-.menu-toggler:checked ~ ul .menu-item a {
-  pointer-events:auto;
-}
-.menu-toggler + label {
-  width: 40px;
-  height: 5px;
-  display: block;
-  z-index: 1;
-  border-radius: 2.5px;
-  background: rgba(230, 239, 250, 0.9);
-  transition: transform 0.5s top 0.5s;
-  position: absolute;
-  display: block;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.menu-toggler + label:before,
-.menu-toggler + label:after {
-  width: 40px;
-  height: 5px;
-  display: block;
-  z-index: 1;
-  border-radius: 2.5px;
-  background: rgba(255, 255, 255, 0.7);
-  transition: transform 0.5s top 0.5s;
-  content: "";
-  position: absolute;
-  display: block;
-  left: 0;
-}
-.menu-toggler + label:before {
-  top: 10px;
-}
-.menu-toggler + label:after {
-  top: -10px;
-}
-.menu-item:nth-child(1) a {
-  transform: rotate(0deg);
-}
-.menu-item:nth-child(2) a {
-  transform: rotate(-60deg);
-}
-.menu-item:nth-child(3) a {
-  transform: rotate(-120deg);
-}
-.menu-item:nth-child(4) a {
-  transform: rotate(-180deg);
-}
-.menu-item:nth-child(5) a {
-  transform: rotate(-240deg);
-}
-.menu-item:nth-child(6) a {
-  transform: rotate(-300deg);
-}
-.menu-item {
-  position: absolute;
-  display: block;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 80px;
-  height: 80px;
-  opacity: 0;
-  transition: 0.5s;
-}
-.menu-item a {
-  display: block;
-  width: inherit;
-  height: inherit;
-  line-height: 80px;
-  color: rgba(255, 255, 255, 0.7);
-  background: rgba(230, 230, 250, 0.7);
-  border-radius: 50%;
-  text-align: center;
-  text-decoration: none;
-  font-size: 40px;
-  pointer-events: none;
-  transition: 0.2s;
-}
-.menu-item a:hover {
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
-  color: white;
-  background: rgba(255, 255, 255, 0.3);
-  font-size: 44.44px
-}
-<!--The end of the Circle_Menu found in bottom of page -->
-
-.modal-header, h4, .close {
-  background-color: #5cb85c;
-  color:white !important;
-  text-align: center;
-  font-size: 30px;
-}
-.modal-footer {
-  background-color: #f9f9f9;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-
-
-
-  /* Full-width input fields */
-  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-
-  /* Add a background color when the inputs get focus */
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-
-  /* Set a style for all buttons */
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
-
-  button:hover {
-    opacity:1;
-  }
-
-  /* Extra styles for the cancel button */
-  .cancelbtn {
-    padding: 14px 20px;
-    background-color: #f44336;
-  }
-
-  /* Float cancel and signup buttons and add an equal width */
-  .cancelbtn, .signupbtn {
-    float: left;
-    width: 50%;
-  }
-
-  /* Add padding to container elements */
-  .container {
-    padding: 16px;
-  }
-
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #474e5d;
-    padding-top: 50px;
-  }
-
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-
-  /* Style the horizontal ruler */
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-
-  /* The Close Button (x) */
-  .close {
-    position: absolute;
-    right: 35px;
-    top: 15px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #f1f1f1;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: #f44336;
-    cursor: pointer;
-  }
-
-  /* Clear floats */
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  /* Change styles for cancel button and signup button on extra small screens */
-  @media screen and (max-width: 100px) {
-    .cancelbtn, .signupbtn {
-       width: 100%;
-    }
-  }
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) { ... }
-
-  // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) { ... }
-
-  // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) { ... }
-
-  // Extra large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) { ... }
-
-  .card-columns {
-    @include media-breakpoint-only(lg) {
-      column-count: 4;
-    }
-    @include media-breakpoint-only(xl) {
-      column-count: 5;
-    }
-  }
-
-  @media (max-width: @screen-xs-min) {
-    .modal-xs { width: @modal-sm; }
-  }
-  /* Full-width input fields */
-  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-
-  /* Add a background color when the inputs get focus */
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-
-  /* Set a style for all buttons */
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
-
-  button:hover {
-    opacity:1;
-  }
-
-  /* Extra styles for the cancel button */
-  .cancelbtn {
-    padding: 14px 20px;
-    background-color: #f44336;
-  }
-
-  /* Float cancel and signup buttons and add an equal width */
-  .cancelbtn, .signupbtn {
-    float: left;
-    width: 50%;
-  }
-
-  /* Add padding to container elements */
-  .container {
-    padding: 16px;
-  }
-
-  /* The Modal (background) */
-  .modal {
-    display: grid;; /* Hidden by default */
-    position: static;; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #474e5d;
-    padding-top: 50px;
-  }
-
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-
-  /* Style the horizontal ruler */
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-
-  /* The Close Button (x) */
-  .close {
-    position: absolute;
-    right: 35px;
-    top: 15px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #f1f1f1;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: #f44336;
-    cursor: pointer;
-  }
-
-  /* Clear floats */
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  /* Change styles for cancel button and signup button on extra small screens */
-  @media screen and (max-width: 300px) {
-    .cancelbtn, .signupbtn {
-       width: 100%;
-    }
-  }
-
-  #test p {
-    opacity: 0;
-    margin-top: 25px;
-    font-size: 21px;
-    text-align: center;
-    -webkit-transition: opacity 2s ease-in;
-    -moz-transition: opacity 2s ease-in;
-    -o-transition: opacity 2s ease-in;
-    -ms-transition: opacity 2s ease-in;
-    transition: opacity 2s ease-in;
-}
-#test p.load {
-    opacity: 1;
-}
