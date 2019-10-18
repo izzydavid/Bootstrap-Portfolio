@@ -10,3 +10,5 @@ document.getElementById("menu").style.transform="scale(3)";
     i=0;
   }
 }
+
+$("#test p").addClass("load");​
