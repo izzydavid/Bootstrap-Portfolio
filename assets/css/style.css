@@ -14,6 +14,10 @@ body {
 
 }
 
+.card {
+  float: left;
+  align-content: center;
+}
 /**This is Native CSS Footer*/
 footer,
 section {
